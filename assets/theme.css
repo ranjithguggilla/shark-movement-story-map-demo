@@ -1,0 +1,31 @@
+/* Scoped Streamlit polish — Gulf shark demo (synthetic) */
+.block-container {
+  padding-top: 1.25rem;
+  padding-bottom: 2rem;
+  max-width: 1400px;
+}
+.hero-band {
+  background: linear-gradient(120deg, #0d1b2a 0%, #1b4965 45%, #2a6f97 100%);
+  color: #e8f1f5;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 24px rgba(13, 27, 42, 0.35);
+}
+.hero-band h1 {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem 0;
+  font-size: 1.65rem;
+  border: none;
+}
+.hero-band p {
+  margin: 0;
+  opacity: 0.92;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+div[data-testid="stTabs"] button {
+  font-weight: 600;
+}

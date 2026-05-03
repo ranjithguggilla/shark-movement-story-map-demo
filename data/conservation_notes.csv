@@ -1,0 +1,7 @@
+section,heading,body_md
+what_tags_do,What satellite-linked tags do,"Tags record locations when animals surface or pass receivers (depending on tag type). **This demo uses synthetic pings only.** Real tags combine sensors and transmit bursts opportunistically—not continuously."
+ping_gaps,Why pings are not continuous,"Transmission depends on battery life, antenna orientation, surfacing behavior, and ocean conditions. **Gaps are normal** and should be framed honestly to the public."
+uncertainty,Why some locations may be uncertain,"Each ping carries implied uncertainty depending on sensor mode and environmental noise. Demo uses `location_quality` labels (**high/medium/low**) as a teaching placeholder—not operational Argos codes."
+why_movement_matters,Why shark movement matters,"Understanding routes informs habitat protections, avoids misleading single-point narratives, and connects fisheries-independent observations with broader ecosystem questions."
+anglers_role,How anglers contribute,"Responsible reporting, tagging collaborations, and ethical handling amplify conservation outcomes when paired with transparent science communication."
+release_practices,Responsible handling and release,"Follow regional guidance for shark-safe handling and rapid release (for example NOAA Fisheries shark-handling summaries and state fishery bulletins). **Never approach wildlife recklessly for photographs.**"

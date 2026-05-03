@@ -1,0 +1,6 @@
+shark_id,total_distance_miles,max_daily_distance,avg_speed_mph,track_duration_days,nearshore_percent
+SHK-001,380.1,16.1,1.02,86,31.5
+SHK-002,355.3,19.7,1.27,84,14.1
+SHK-003,323.7,20.0,0.76,85,37.8
+SHK-004,395.2,16.4,0.86,82,27.2
+SHK-005,334.6,19.4,0.51,87,40.0

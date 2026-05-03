@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+# Strips Co-authored-by lines so GitHub does not attribute extra contributors.
+# Enable once per clone: git config core.hooksPath .githooks
+msg="$1"
+[ -n "$msg" ] && [ -f "$msg" ] || exit 0
+tmp="${msg}.strip.$$"
+grep -v '^Co-authored-by:' "$msg" > "$tmp" && mv "$tmp" "$msg"
+exit 0
