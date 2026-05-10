@@ -5,17 +5,29 @@
 
 Shark movement story map — temporal playback, environmental context, science communication layer.
 
-## Demo media
+---
 
-Streamlit app (**`streamlit run app.py`**). Synthetic demonstration tracks only.
+## Overview
 
-### Walkthrough GIF
+**Gulf Shark Movement Story Map** is a Streamlit dashboard for exploring **synthetic** multi-species tracks in the Gulf: story map playback, species profiles, environmental context, education copy, and exportable demo artifacts—positioned as **public engagement / science communication**, not operational telemetry.
 
-After you convert a screen recording, save it as **`assets/gifs/demo-overview.gif`** and uncomment the line below (or add `![walkthrough](assets/gifs/demo-overview.gif)`).
+<p align="center">
+  <img src="assets/gifs/demo-overview.gif" alt="End-to-end walkthrough: Gulf Shark Movement Story Map (Streamlit demo, synthetic tracks)" width="95%">
+</p>
 
-<!-- ![Gulf Shark Movement Story Map walkthrough](assets/gifs/demo-overview.gif) -->
+<p align="center">
+  <sub><strong>Quick tour</strong> — filters · map playback · assistive QC · Plotly animation · journey summaries · profiles · environmental charts · education · export · <code>outputs/</code> downloads · <em>synthetic demonstration data only</em></sub>
+</p>
 
-### Screenshots
+<p align="center">
+  <sub>GIF: <code>assets/gifs/demo-overview.gif</code> · encoded ~3 fps / 720px wide for faster GitHub README loading</sub>
+</p>
+
+---
+
+## Demo gallery
+
+Static screenshots from **`streamlit run app.py`** live under **`assets/screenshots/`**.
 
 <details>
 <summary><strong>Expand: 14 UI screenshots</strong> (story map → profiles → environmental → education → export)</summary>
@@ -39,11 +51,11 @@ After you convert a screen recording, save it as **`assets/gifs/demo-overview.gi
 
 </details>
 
-**GIF conversion (example):**
+**Regenerate `demo-overview.gif` (optional):**
 
 ```bash
 ffmpeg -hide_banner -loglevel error -y -i "/path/to/recording.webm" \
-  -vf "fps=4,scale=900:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128:stats_mode=single[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3" \
+  -vf "fps=3,scale=720:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=96:stats_mode=single[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3" \
   assets/gifs/demo-overview.gif
 ```
 
