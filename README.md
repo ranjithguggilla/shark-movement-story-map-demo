@@ -1,10 +1,55 @@
-# Gulf Shark Movement Story Map: Public Engagement Prototype
+# shark-movement-story-map-demo
 
-Repo slug for packaging: **`shark-movement-story-map-demo`**.
+[![CI](https://github.com/ranjithguggilla/shark-movement-story-map-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/ranjithguggilla/shark-movement-story-map-demo/actions/workflows/ci.yml)
+![Python 3.11+](https://img.shields.io/badge/python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
+
+Shark movement story map — temporal playback, environmental context, science communication layer.
+
+## Demo media
+
+Streamlit app (**`streamlit run app.py`**). Synthetic demonstration tracks only.
+
+### Walkthrough GIF
+
+After you convert a screen recording, save it as **`assets/gifs/demo-overview.gif`** and uncomment the line below (or add `![walkthrough](assets/gifs/demo-overview.gif)`).
+
+<!-- ![Gulf Shark Movement Story Map walkthrough](assets/gifs/demo-overview.gif) -->
+
+### Screenshots
+
+<details>
+<summary><strong>Expand: 14 UI screenshots</strong> (story map → profiles → environmental → education → export)</summary>
+
+| View | Preview |
+|------|---------|
+| Story Map — filters + QC legend | ![Story map overview](assets/screenshots/01-story-map-overview-filters-qc.png) |
+| Story Map — playback + ML QC overlay | ![QC overlay](assets/screenshots/02-story-map-playback-qc-overlay.png) |
+| Animated playback (Plotly) | ![Animated playback](assets/screenshots/03-animated-playback-plotly.png) |
+| Journey summary + optional AI wording | ![Journey summary](assets/screenshots/04-journey-summary-ai-wording.png) |
+| Story Map — latest ping popup | ![Latest ping](assets/screenshots/05-story-map-latest-ping-popup.png) |
+| Profiles — Navigator Alpha | ![Navigator Alpha](assets/screenshots/06-profiles-navigator-alpha.png) |
+| Profiles — Tiger & Mako cards | ![Tiger Mako profiles](assets/screenshots/07-profiles-tiger-mako-cards.png) |
+| Profiles — Blacktip & Bull cards | ![Blacktip Bull profiles](assets/screenshots/08-profiles-blacktip-bull-cards.png) |
+| Environmental context — playback row | ![Environmental context](assets/screenshots/09-environmental-context-playback.png) |
+| Environmental — distance chart | ![Environmental chart](assets/screenshots/10-environmental-context-chart.png) |
+| Distance from shore over time | ![Distance from shore](assets/screenshots/11-distance-from-shore-over-time.png) |
+| Education — public context | ![Education](assets/screenshots/12-education-public-context.png) |
+| Export — demo artifacts | ![Export](assets/screenshots/13-export-demo-artifacts.png) |
+| Export — regenerated outputs | ![Export success](assets/screenshots/14-export-regenerated-success.png) |
+
+</details>
+
+**GIF conversion (example):**
+
+```bash
+ffmpeg -hide_banner -loglevel error -y -i "/path/to/recording.webm" \
+  -vf "fps=4,scale=900:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128:stats_mode=single[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3" \
+  assets/gifs/demo-overview.gif
+```
 
 ## Positioning and constraints
 
-This repository is a public-data-safe science communication prototype inspired by shark movement, tagging, and public engagement workflows. It does not use private HRI/CSSC data and does not attempt to replace existing tools such as Fin Finder. The goal is to demonstrate how movement tracks can be presented with storytelling, environmental context, and education-focused summaries for public engagement.
+This repository is a public-data-safe science communication prototype inspired by shark movement, tagging, and public engagement workflows. It does not use private or restricted program data and does not attempt to replace existing tools such as Fin Finder. The goal is to demonstrate how movement tracks can be presented with storytelling, environmental context, and education-focused summaries for public engagement.
 
 Additional constraints:
 
