@@ -59,15 +59,9 @@ ffmpeg -hide_banner -loglevel error -y -i "/path/to/recording.webm" \
   assets/gifs/demo-overview.gif
 ```
 
-## Data & limitations
-
-- **Public-data-safe:** Synthetic demonstration tracks and education-oriented copy only—see **Data files** below.
-- **No internal HRI/CSSC data:** This repository does **not** use confidential, restricted, or internal datasets from HRI, CSSC, or partner fishery programs.
-- **Prototype:** Not biological inference, stock assessment, abundance estimation, or operational telemetry output.
-
 ## Positioning and constraints
 
-This repository is a **science communication** layer inspired by shark movement, tagging, and public engagement workflows. It does not attempt to replace operational tools such as **Fin Finder**. The goal is to show how movement tracks can be presented with storytelling, environmental context, and education-focused summaries—using **synthetic** demonstration data in this repo.
+This repository is a public-data-safe science communication prototype inspired by shark movement, tagging, and public engagement workflows. It does not use private or restricted program data and does not attempt to replace existing tools such as Fin Finder. The goal is to demonstrate how movement tracks can be presented with storytelling, environmental context, and education-focused summaries for public engagement.
 
 Additional constraints:
 
@@ -91,12 +85,6 @@ Phase 2 additions (assistive only):
 - Rule-based journey summaries (canonical); optional LLM-assisted wording when configured (experimental).
 - Education panels for tagging uncertainty and responsible viewing expectations.
 
-## How this could support research workflows
-
-- **Outreach and literacy:** Communicates tagging and movement concepts to public audiences with explicit synthetic-data labeling.
-- **Methods sandbox:** Demonstrates assistive QC visualizations and reproducible exports (`outputs/`) for workshops—not operational shark monitoring or predictive biology.
-- **Transparent UX patterns:** Separates rule-based summaries from optional experimental helpers (see Phase 2 notes above).
-
 ## Run locally
 
 ```bash
@@ -119,8 +107,6 @@ make setup
 make build-outputs
 make run
 ```
-
-**Contributors on GitHub:** this repo includes a `.githooks/commit-msg` script. After clone, run `git config core.hooksPath .githooks` once so your environment never appends `Co-authored-by` lines to commits (which GitHub counts as extra contributors). In Cursor, also disable any setting that adds Cursor as a co-author to commits.
 
 ## Quality checks
 
